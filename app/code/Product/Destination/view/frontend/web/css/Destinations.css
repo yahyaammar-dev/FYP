@@ -1,0 +1,15 @@
+.catalog-product-view .page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+.catalog-product-view .page-header .sections {
+  margin: 0;
+}
+.catalog-product-view .page-header .logo {
+  margin: 0;
+}
+.catalog-product-view .page-header .navigation {
+  background-color: transparent;
+}

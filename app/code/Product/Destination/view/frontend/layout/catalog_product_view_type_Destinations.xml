@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+        <css src="Product_Destinaiton::css/Destinations.css" />
+    </head>
+    <update handle="catalog_product_opengraph" />
+    <update handle="page_calendar"/>
+    <body>
+
+    <!--Removing Elements-->
+
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.info.social" remove="true" />
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="product.info.sku" remove="true" />
+        <referenceBlock name="product.info.overview" remove="true" />
+        <referenceBlock name="skip_gallery_after.target" remove="true"/>
+        <referenceContainer name="skip_gallery_before.wrapper" remove="true"/>
+        <referenceContainer name="skip_gallery_after.wrapper" remove="true"/>
+        <referenceBlock name="skip_gallery_before.target" remove="true"/>
+        <referenceBlock name="catalog.product.related" remove="true"/>
+        <referenceBlock name="head.components" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="content" remove="true"/>
+        <referenceBlock name="header.panel" remove="true"/>
+        <referenceBlock name="minicart" remove="true"/>
+        <referenceContainer name="page.top" remove="true"/>
+        <referenceContainer name="columns.top" remove="true"/>
+        <referenceContainer name="main" remove="true"/>
+        <referenceContainer name="footer-container" remove="true"/>
+        <referenceContainer name="copyright" remove="true"/>
+        <referenceContainer name="header-wrapper" remove="true"/>
+
+
+    <!--Header-->
+        <referenceContainer name="header.container">
+            <container name="ublogo" htmlTag="div"  htmlClass="logo" label="Logo"/>
+            <container name="ubnav" htmlTag="div" htmlClass="nav" label="Navigation"/>
+            <container name="ubsearch" htmlTag="div" htmlClass="search" label="Icon"/>
+        </referenceContainer>
+
+
+        <move element="ubheader" destination="main.content" />
+
+        <move element="logo" destination="ublogo" />
+        <move element="navigation.sections" destination="ubnav" />
+        <move element="top.search" destination="ubsearch"/>
+
+
+    </body>
+</page>
+
+
+
